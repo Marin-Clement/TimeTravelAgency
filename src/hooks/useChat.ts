@@ -23,7 +23,7 @@ export function useChat() {
         { id: "1", label: "🗼 Paris 1889", prompt: "Parle-moi de la destination Paris 1889" },
         { id: "2", label: "🦕 Le Crétacé", prompt: "Le Crétacé est-il dangereux ? Combien ça coûte ?" },
         { id: "3", label: "🎨 Florence 1504", prompt: "Que puis-je vivre à Florence en 1504 ?" },
-        { id: "4", label: "💰 Tarifs", prompt: "Quels sont vos forfaits et tarifs ?" },
+        { id: "4", label: "💰 Tarifs", prompt: "Quels sont les détails des forfaits Explorer, Connoisseur et Legacy ?" },
         { id: "5", label: "❓ FAQ", prompt: "Quelles sont les questions fréquentes sur le voyage temporel ?" },
     ];
 

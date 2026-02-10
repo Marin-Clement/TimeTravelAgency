@@ -30,6 +30,7 @@ export function BookingForm({ selectedDestinationId }: BookingFormProps) {
         travelers: 1,
         insurance: false,
     });
+    const [isCalendarOpen, setIsCalendarOpen] = useState(false);
 
     useEffect(() => {
         if (selectedDestinationId) {
@@ -111,7 +112,7 @@ export function BookingForm({ selectedDestinationId }: BookingFormProps) {
                 <div className="grid grid-cols-2 gap-4">
                     <div className="space-y-2 flex flex-col">
                         <label className="text-sm text-gray-400 uppercase tracking-wide">Date de départ</label>
-                        <Popover>
+                        <Popover open={isCalendarOpen} onOpenChange={setIsCalendarOpen}>
                             <PopoverTrigger asChild>
                                 <button
                                     className={cn(
@@ -127,7 +128,10 @@ export function BookingForm({ selectedDestinationId }: BookingFormProps) {
                                 <Calendar
                                     mode="single"
                                     selected={formData.startDate}
-                                    onSelect={(date) => setFormData({ ...formData, startDate: date })}
+                                    onSelect={(date) => {
+                                        setFormData({ ...formData, startDate: date });
+                                        setIsCalendarOpen(false);
+                                    }}
                                     initialFocus
                                     className="p-3 pointer-events-auto"
                                     classNames={{
