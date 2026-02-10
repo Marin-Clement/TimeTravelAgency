@@ -66,7 +66,7 @@ export function DestinationCard({ destination, index, onSelect }: DestinationCar
           </div>
         </div>
         <button className="w-full py-3 border-2 border-luxury-gold text-luxury-gold rounded-full hover:bg-luxury-gold hover:text-deep-space transition-all duration-300 tracking-wide font-semibold group-hover:shadow-[0_0_20px_rgba(212,175,55,0.4)]">
-          Discover Era
+          Découvrir cette Époque
         </button>
       </div>
     </motion.div>

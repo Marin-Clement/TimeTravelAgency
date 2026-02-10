@@ -16,13 +16,13 @@ export function Pricing() {
           className="text-center mb-16"
         >
           <h2 className="text-5xl md:text-6xl mb-6">
-            Choose Your{" "}
+            Choisissez Votre{" "}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-luxury-gold to-rich-brown">
-              Journey
+              Voyage
             </span>
           </h2>
           <p className="text-xl text-gray-400 max-w-2xl mx-auto">
-            Select the perfect package for your temporal adventure
+            Sélectionnez le forfait parfait pour votre aventure temporelle
           </p>
         </motion.div>
 
@@ -45,7 +45,7 @@ export function Pricing() {
             >
               {tier.popular && (
                 <div className="absolute -top-4 left-1/2 -translate-x-1/2 px-4 py-1 bg-gradient-to-r from-luxury-gold to-rich-brown text-deep-space rounded-full text-sm font-semibold">
-                  Most Popular
+                  Le Plus Populaire
                 </div>
               )}
               <div className="text-center mb-8">
@@ -73,7 +73,7 @@ export function Pricing() {
                     : "border-2 border-luxury-gold text-luxury-gold hover:bg-luxury-gold hover:text-deep-space p-4"
                 }`}
               >
-                Start Journey
+                Commencer le Voyage
               </a>
             </motion.div>
           ))}

@@ -21,8 +21,8 @@ export function Footer() {
                             </span>
                         </div>
                         <p className="text-gray-400 text-sm leading-relaxed mb-4">
-                            Experience history's greatest moments with
-                            unparalleled luxury and authenticity.
+                            Vivez les plus grands moments de l'histoire avec
+                            un luxe et une authenticité inégalés.
                         </p>
                         <div className="flex gap-4">
                             <a
@@ -56,7 +56,7 @@ export function Footer() {
                                     href="#"
                                     className="hover:text-luxury-gold transition-colors"
                                 >
-                                    Ancient Egypt
+                                    Égypte Ancienne
                                 </a>
                             </li>
                             <li>
@@ -64,7 +64,7 @@ export function Footer() {
                                     href="#"
                                     className="hover:text-luxury-gold transition-colors"
                                 >
-                                    Renaissance Italy
+                                    Italie Renaissance
                                 </a>
                             </li>
                             <li>
@@ -72,7 +72,7 @@ export function Footer() {
                                     href="#"
                                     className="hover:text-luxury-gold transition-colors"
                                 >
-                                    Victorian England
+                                    Angleterre Victorienne
                                 </a>
                             </li>
                             <li>
@@ -80,7 +80,7 @@ export function Footer() {
                                     href="#"
                                     className="hover:text-luxury-gold transition-colors"
                                 >
-                                    Prehistoric Era
+                                    Ère Préhistorique
                                 </a>
                             </li>
                         </ul>
@@ -88,7 +88,7 @@ export function Footer() {
 
                     <div>
                         <h4 className="font-semibold mb-4 text-luxury-gold">
-                            Company
+                            Entreprise
                         </h4>
                         <ul className="space-y-2 text-sm text-gray-400">
                             <li>
@@ -96,7 +96,7 @@ export function Footer() {
                                     href="#"
                                     className="hover:text-luxury-gold transition-colors"
                                 >
-                                    About Us
+                                    À propos
                                 </a>
                             </li>
                             <li>
@@ -104,7 +104,7 @@ export function Footer() {
                                     href="#"
                                     className="hover:text-luxury-gold transition-colors"
                                 >
-                                    Safety Standards
+                                    Normes de Sécurité
                                 </a>
                             </li>
                             <li>
@@ -112,7 +112,7 @@ export function Footer() {
                                     href="#"
                                     className="hover:text-luxury-gold transition-colors"
                                 >
-                                    Careers
+                                    Carrières
                                 </a>
                             </li>
                             <li>
@@ -120,7 +120,7 @@ export function Footer() {
                                     href="#"
                                     className="hover:text-luxury-gold transition-colors"
                                 >
-                                    Press
+                                    Presse
                                 </a>
                             </li>
                         </ul>
@@ -153,27 +153,26 @@ export function Footer() {
 
                 <div className="pt-8 border-t border-luxury-gold/10 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-gray-500">
                     <p>
-                        © 2026 TimeTravel Agency. All temporal rights
-                        reserved.
+                        © 2026 TimeTravel Agency. Tous droits temporels réservés.
                     </p>
                     <div className="flex gap-6">
                         <a
                             href="#"
                             className="hover:text-luxury-gold transition-colors"
                         >
-                            Privacy Policy
+                            Politique de Confidentialité
                         </a>
                         <a
                             href="#"
                             className="hover:text-luxury-gold transition-colors"
                         >
-                            Terms of Service
+                            Conditions d'Utilisation
                         </a>
                         <a
                             href="#"
                             className="hover:text-luxury-gold transition-colors"
                         >
-                            Temporal Compliance
+                            Conformité Temporelle
                         </a>
                     </div>
                 </div>

@@ -60,19 +60,19 @@ export function Navbar({ onOpenQuiz }: NavbarProps) {
             href="#experience"
             className="hidden md:block text-sm tracking-wide text-white hover:text-luxury-gold transition-colors"
           >
-            The Experience
+            L'Expérience
           </a>
           <a
             href="#pricing"
             className="hidden md:block text-sm tracking-wide text-white hover:text-luxury-gold transition-colors"
           >
-            Pricing
+            Tarifs
           </a>
           <button
             onClick={onOpenQuiz}
             className="px-6 py-2 bg-gradient-to-r from-luxury-gold to-rich-brown text-deep-space rounded-full text-sm tracking-wide hover:shadow-[0_0_20px_rgba(212,175,55,0.5)] transition-all duration-300 font-semibold"
           >
-            Find Your Era
+            Trouvez votre Époque
           </button>
         </div>
       </nav>

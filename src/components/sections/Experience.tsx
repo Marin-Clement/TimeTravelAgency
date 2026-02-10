@@ -18,14 +18,10 @@ export function Experience() {
           viewport={{ once: true }}
         >
           <h2 className="text-5xl md:text-6xl lg:text-7xl mb-8 text-transparent bg-clip-text bg-gradient-to-r from-luxury-gold to-rich-brown">
-            The Ultimate Immersive Experience
+            L'Expérience Immersive Ultime
           </h2>
           <p className="text-lg md:text-xl lg:text-2xl text-gray-300 leading-relaxed mb-16 max-w-4xl mx-auto">
-            Our voyages transcend traditional tourism. Guided by
-            state-of-the-art quantum AI and temporal synchronization technology,
-            each journey is meticulously crafted to immerse you in the authentic
-            sights, sounds, and sensations of history's most magnificent
-            moments.
+            Nos voyages transcendent le tourisme traditionnel. Guidés par une IA quantique de pointe et une technologie de synchronisation temporelle, chaque périple est méticuleusement conçu pour vous immerger dans les vues, les sons et les sensations authentiques des moments les plus magnifiques de l'histoire.
           </p>
 
           {/* Features Grid */}

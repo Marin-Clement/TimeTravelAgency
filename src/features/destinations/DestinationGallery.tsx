@@ -21,14 +21,13 @@ export function DestinationGallery({ onSelectDestination }: DestinationGalleryPr
                     className="text-center mb-16"
                 >
                     <h2 className="text-5xl md:text-6xl lg:text-7xl mb-6 tracking-tight text-white">
-                        Select Your{" "}
+                        Sélectionnez Votre{" "}
                         <span className="text-transparent bg-clip-text bg-gradient-to-r from-luxury-gold to-rich-brown">
-                            Era
+                            Époque
                         </span>
                     </h2>
                     <p className="text-xl text-gray-400 max-w-2xl mx-auto">
-                        Journey to meticulously recreated historical periods, each with
-                        unparalleled authenticity and luxury.
+                        Voyagez vers des périodes historiques méticuleusement recréées, chacune avec une authenticité et un luxe inégalés.
                     </p>
                 </motion.div>
 
