@@ -16,13 +16,13 @@ export function Testimonials() {
                     className="text-center mb-16"
                 >
                     <h2 className="text-5xl md:text-6xl mb-6">
-                        Traveler{" "}
+                        Histoires de{" "}
                         <span className="text-transparent bg-clip-text bg-gradient-to-r from-luxury-gold to-rich-brown">
-                            Stories
+                            Voyageurs
                         </span>
                     </h2>
                     <p className="text-xl text-gray-400 max-w-2xl mx-auto">
-                        Hear from those who've experienced history firsthand
+                        Écoutez ceux qui ont vécu l'histoire de première main
                     </p>
                 </motion.div>
 

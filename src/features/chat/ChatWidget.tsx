@@ -99,12 +99,12 @@ export function ChatWidget() {
                         </div>
 
                         {/* Quick Actions */}
-                        <div className="px-4 pb-2 flex gap-2 overflow-x-auto scrollbar-none">
+                        <div className="px-4 pb-2 flex flex-wrap gap-2">
                             {quickActions.map((action) => (
                                 <button
                                     key={action.id}
                                     onClick={() => sendMessage(action.prompt)}
-                                    className="whitespace-nowrap px-3 py-1 bg-luxury-gold/5 border border-luxury-gold/20 rounded-full text-xs text-luxury-gold hover:bg-luxury-gold/10 transition-colors flex-shrink-0"
+                                    className="px-3 py-1 bg-luxury-gold/5 border border-luxury-gold/20 rounded-full text-xs text-luxury-gold hover:bg-luxury-gold/10 transition-colors cursor-pointer"
                                 >
                                     {action.label}
                                 </button>
@@ -119,7 +119,7 @@ export function ChatWidget() {
                                     value={inputValue}
                                     onChange={(e) => setInputValue(e.target.value)}
                                     onKeyDown={handleKeyDown}
-                                    placeholder="Ask about an era..."
+                                    placeholder="Posez votre question..."
                                     className="flex-1 bg-[#1a1a1a] border border-luxury-gold/20 rounded-full px-4 py-2 text-sm text-white focus:outline-none focus:border-luxury-gold focus:ring-1 focus:ring-luxury-gold/50 transition-all placeholder-gray-500"
                                 />
                                 <button
@@ -149,7 +149,7 @@ export function ChatWidget() {
                         transition={{ delay: 2, duration: 0.3 }}
                         className="absolute -top-2 -right-2 bg-deep-space text-luxury-gold text-xs px-3 py-1 rounded-full border border-luxury-gold whitespace-nowrap shadow-lg"
                     >
-                        Need guidance?
+                        Besoin d'aide ?
                     </motion.div>
                 )}
 

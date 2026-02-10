@@ -30,7 +30,7 @@ export function Hero({ onOpenQuiz }: HeroProps) {
                     className="absolute inset-0 w-full h-full object-cover"
                 >
                     <source
-                        src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4"
+                        src="/src/public/video/hero-video.mp4"
                         type="video/mp4"
                     />
                     {/* Fallback for browsers that don't support video */}
@@ -88,7 +88,7 @@ export function Hero({ onOpenQuiz }: HeroProps) {
                     <div className="inline-flex items-center gap-2 px-4 py-2 bg-luxury-gold/10 border border-luxury-gold/30 rounded-full backdrop-blur-sm mb-8">
                         <Sparkles className="w-4 h-4 text-luxury-gold" />
                         <span className="text-sm text-luxury-gold tracking-wider">
-                            Premium Temporal Expeditions
+                            Expéditions Temporelles Premium
                         </span>
                     </div>
                 </motion.div>
@@ -99,9 +99,9 @@ export function Hero({ onOpenQuiz }: HeroProps) {
                     transition={{ duration: 1, delay: 0.2 }}
                     className="text-6xl md:text-8xl lg:text-9xl mb-6 tracking-tight leading-none text-white"
                 >
-                    History is{" "}
+                    L'Histoire vous{" "}
                     <span className="text-transparent bg-clip-text bg-gradient-to-r from-luxury-gold via-[#f4d03f] to-rich-brown animate-[shimmer_3s_ease-in-out_infinite]">
-                        Waiting
+                        Attend
                     </span>
                     .
                 </motion.h1>
@@ -112,7 +112,7 @@ export function Hero({ onOpenQuiz }: HeroProps) {
                     transition={{ duration: 1, delay: 0.5 }}
                     className="text-xl md:text-2xl lg:text-3xl text-gray-300 mb-12 tracking-wide max-w-4xl mx-auto leading-relaxed"
                 >
-                    Curated luxury expeditions to Earth's greatest eras.
+                    Des expéditions de luxe vers les plus grandes époques de la Terre.
                 </motion.p>
 
                 <motion.div
@@ -126,18 +126,12 @@ export function Hero({ onOpenQuiz }: HeroProps) {
                         className="group relative px-10 py-4 bg-gradient-to-r from-luxury-gold to-rich-brown text-deep-space rounded-full text-lg tracking-wide overflow-hidden hover:shadow-[0_0_40px_rgba(212,175,55,0.6)] transition-all duration-500 font-semibold cursor-pointer"
                     >
                         <span className="relative z-10 flex items-center gap-2">
-                            Find Your Era
+                            Trouvez votre Époque
                             <Sparkles className="w-5 h-5 group-hover:rotate-12 transition-transform duration-300" />
                         </span>
                         <div className="absolute inset-0 bg-gradient-to-r from-rich-brown to-luxury-gold opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                     </button>
 
-                    <button className="group px-10 py-4 border-2 border-luxury-gold text-luxury-gold rounded-full text-lg tracking-wide hover:bg-luxury-gold/10 transition-all duration-300 font-semibold cursor-pointer">
-                        <span className="flex items-center gap-2">
-                            Watch Demo
-                            <ChevronRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
-                        </span>
-                    </button>
                 </motion.div>
             </motion.div>
 

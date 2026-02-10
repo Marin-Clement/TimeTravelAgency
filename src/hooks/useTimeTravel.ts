@@ -8,7 +8,9 @@ interface QuizAnswer {
 
 interface BookingData {
     destinationId: string;
-    date: string; // ISO string
+    email: string;
+    startDate: Date | undefined;
+    duration: number;
     travelers: number;
     insurance: boolean;
 }
@@ -18,29 +20,29 @@ export type QuizStep = "intro" | "question" | "result" | "booking";
 export const QUIZ_QUESTIONS = [
     {
         id: 1,
-        text: "What drives your spirit?",
+        text: "Qu'est-ce qui anime votre esprit ?",
         options: [
             { id: "art", label: "Art & Culture", value: "cultural" },
-            { id: "nature", label: "Nature & Adventure", value: "nature" },
-            { id: "elegance", label: "Elegance & Society", value: "elegant" },
+            { id: "nature", label: "Nature & Aventure", value: "nature" },
+            { id: "elegance", label: "Élégance & Société", value: "elegant" },
         ],
     },
     {
         id: 2,
-        text: "Which era fascinates you?",
+        text: "Quelle époque vous fascine ?",
         options: [
             { id: "renaissance", label: "Renaissance", value: "renaissance" },
-            { id: "modern", label: "Industrial/Modern", value: "industrial" },
-            { id: "origins", label: "Ancient Origins", value: "ancient" },
+            { id: "modern", label: "Industriel / Moderne", value: "industrial" },
+            { id: "origins", label: "Origines Anciennes", value: "ancient" },
         ],
     },
     {
         id: 3,
-        text: "Preferred environment?",
+        text: "Environnement préféré ?",
         options: [
-            { id: "urban", label: "Bustling City", value: "urban" },
-            { id: "wild", label: "Untamed Wild", value: "wild" },
-            { id: "studio", label: "Quiet Studio/Museum", value: "quiet" },
+            { id: "urban", label: "Ville Animée", value: "urban" },
+            { id: "wild", label: "Nature Sauvage", value: "wild" },
+            { id: "studio", label: "Studio Calme / Musée", value: "quiet" },
         ],
     },
 ];

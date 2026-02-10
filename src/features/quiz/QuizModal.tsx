@@ -7,9 +7,10 @@ import { Destination } from "../../types";
 interface QuizModalProps {
     onClose: () => void;
     isOpen: boolean;
+    onSelectDestination?: (destinationId: string) => void;
 }
 
-export function QuizModal({ onClose, isOpen }: QuizModalProps) {
+export function QuizModal({ onClose, isOpen, onSelectDestination }: QuizModalProps) {
     // We're lifting state up to the parent component in a real app,
     // but for this modular feature, we can instantiate the hook here or pass it down.
     // For simplicity, let's assume we use the hook inside.
@@ -78,17 +79,17 @@ export function QuizModal({ onClose, isOpen }: QuizModalProps) {
                                     <div className="w-12 h-12 border-2 border-luxury-gold rounded-full animate-spin-slow"></div>
                                 </div>
                                 <h2 className="text-3xl md:text-4xl text-white font-serif">
-                                    Discover Your Perfect Era
+                                    Découvrez votre Époque Idéale
                                 </h2>
                                 <p className="text-gray-300 text-lg max-w-md mx-auto">
-                                    Answer 3 simple questions to let our Temporal AI match you with
-                                    the destination that resonates with your soul.
+                                    Répondez à 3 questions simples pour laisser notre IA Temporelle trouver
+                                    la destination qui résonne avec votre âme.
                                 </p>
                                 <button
                                     onClick={startQuiz}
                                     className="mt-8 px-8 py-3 bg-luxury-gold text-deep-space rounded-full font-semibold hover:bg-white transition-colors"
                                 >
-                                    Begin Journey
+                                    Commencer le Voyage
                                 </button>
                             </motion.div>
                         )}
@@ -104,7 +105,7 @@ export function QuizModal({ onClose, isOpen }: QuizModalProps) {
                                 className="space-y-8"
                             >
                                 <div className="text-sm text-luxury-gold uppercase tracking-widest mb-2">
-                                    Question {currentQuestionIndex + 1} of {QUIZ_QUESTIONS.length}
+                                    Question {currentQuestionIndex + 1} sur {QUIZ_QUESTIONS.length}
                                 </div>
                                 <h2 className="text-3xl text-white mb-8">{question.text}</h2>
                                 <div className="grid gap-4">
@@ -132,7 +133,7 @@ export function QuizModal({ onClose, isOpen }: QuizModalProps) {
                                 className="text-center"
                             >
                                 <div className="mb-2 text-luxury-gold uppercase tracking-widest text-sm">
-                                    Your Perfect Match
+                                    Votre Correspondance Parfaite
                                 </div>
                                 <h2 className="text-4xl md:text-5xl text-white mb-6 font-serif">
                                     {recommendedDestination.name}
@@ -148,21 +149,23 @@ export function QuizModal({ onClose, isOpen }: QuizModalProps) {
                                 </div>
 
                                 <p className="text-gray-300 mb-8 leading-relaxed max-w-lg mx-auto">
-                                    Based on your preferences, this era offers the perfect balance of experience and atmosphere for you.
+                                    Selon vos préférences, cette époque offre l'équilibre parfait entre expérience et atmosphère pour vous.
                                 </p>
 
                                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                                     <button onClick={onClose} className="px-6 py-3 border border-luxury-gold/30 rounded-full text-gray-300 hover:bg-white/5 transition-colors">
-                                        Close
+                                        Fermer
                                     </button>
                                     <button
                                         onClick={() => {
+                                            if (recommendedDestination) {
+                                                onSelectDestination?.(recommendedDestination.id);
+                                            }
                                             onClose();
-                                            document.getElementById("book")?.scrollIntoView({ behavior: "smooth" });
                                         }}
                                         className="px-8 py-3 bg-gradient-to-r from-luxury-gold to-rich-brown text-deep-space rounded-full font-bold hover:shadow-[0_0_20px_rgba(212,175,55,0.5)] transition-shadow"
                                     >
-                                        Book This Era
+                                        Réserver cette Époque
                                     </button>
                                 </div>
                             </motion.div>

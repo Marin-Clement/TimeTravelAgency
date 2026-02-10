@@ -16,6 +16,15 @@ import { Sparkles } from "lucide-react";
 
 export default function App() {
   const [isQuizOpen, setIsQuizOpen] = useState(false);
+  const [selectedDestinationId, setSelectedDestinationId] = useState<string | undefined>();
+
+  const handleSelectDestination = (destinationId: string) => {
+    setSelectedDestinationId(destinationId);
+    const bookingSection = document.getElementById("book");
+    if (bookingSection) {
+      bookingSection.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  };
 
   return (
     <div className="min-h-screen bg-deep-space text-white overflow-x-hidden">
@@ -33,17 +42,17 @@ export default function App() {
           className="fixed bottom-8 left-8 z-40 px-6 py-3 bg-luxury-gold/20 backdrop-blur-md border border-luxury-gold text-luxury-gold rounded-full font-semibold hover:bg-luxury-gold hover:text-deep-space transition-all shadow-[0_0_20px_rgba(212,175,55,0.2)] flex items-center gap-2 cursor-pointer"
         >
           <Sparkles className="w-4 h-4" />
-          Find Your Era
+          Trouvez votre Époque
         </motion.button>
 
         <Stats />
         <Experience />
-        <DestinationGallery />
+        <DestinationGallery onSelectDestination={handleSelectDestination} />
 
         {/* Integrated Booking Form Section */}
         <section id="book" className="py-24 px-6 bg-[#0a0a0a]">
           <div className="max-w-4xl mx-auto">
-            <BookingForm />
+            <BookingForm selectedDestinationId={selectedDestinationId} />
           </div>
         </section>
 
@@ -54,7 +63,11 @@ export default function App() {
 
       <Footer />
       <ChatWidget />
-      <QuizModal isOpen={isQuizOpen} onClose={() => setIsQuizOpen(false)} />
+      <QuizModal 
+        isOpen={isQuizOpen} 
+        onClose={() => setIsQuizOpen(false)} 
+        onSelectDestination={handleSelectDestination}
+      />
     </div>
   );
 }

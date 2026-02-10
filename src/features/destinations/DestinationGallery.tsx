@@ -2,7 +2,11 @@ import { motion } from "motion/react";
 import { DestinationCard } from "./DestinationCard";
 import { DESTINATIONS, MORE_DESTINATIONS } from "../../constants/data";
 
-export function DestinationGallery() {
+interface DestinationGalleryProps {
+    onSelectDestination?: (destinationId: string) => void;
+}
+
+export function DestinationGallery({ onSelectDestination }: DestinationGalleryProps) {
     return (
         <section
             id="destinations"
@@ -17,14 +21,13 @@ export function DestinationGallery() {
                     className="text-center mb-16"
                 >
                     <h2 className="text-5xl md:text-6xl lg:text-7xl mb-6 tracking-tight text-white">
-                        Select Your{" "}
+                        Sélectionnez Votre{" "}
                         <span className="text-transparent bg-clip-text bg-gradient-to-r from-luxury-gold to-rich-brown">
-                            Era
+                            Époque
                         </span>
                     </h2>
                     <p className="text-xl text-gray-400 max-w-2xl mx-auto">
-                        Journey to meticulously recreated historical periods, each with
-                        unparalleled authenticity and luxury.
+                        Voyagez vers des périodes historiques méticuleusement recréées, chacune avec une authenticité et un luxe inégalés.
                     </p>
                 </motion.div>
 
@@ -34,6 +37,7 @@ export function DestinationGallery() {
                             key={destination.id}
                             destination={destination}
                             index={index}
+                            onSelect={onSelectDestination}
                         />
                     ))}
                 </div>
@@ -43,7 +47,8 @@ export function DestinationGallery() {
                         <DestinationCard
                             key={destination.id}
                             destination={destination}
-                            index={index + 3} // Offset index for delay
+                            index={index + 3}
+                            onSelect={onSelectDestination}
                         />
                     ))}
                 </div>
