@@ -30,7 +30,7 @@ export function Hero({ onOpenQuiz }: HeroProps) {
                     className="absolute inset-0 w-full h-full object-cover"
                 >
                     <source
-                        src="/src/public/video/hero-video.mp4"
+                        src="/video/hero-video.mp4"
                         type="video/mp4"
                     />
                     {/* Fallback for browsers that don't support video */}

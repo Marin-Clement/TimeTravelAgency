@@ -9,7 +9,7 @@ export const DESTINATIONS: Destination[] = [
         location: "France",
         duration: "7 Jours",
         price: "À partir de 12 500 $",
-        image: "src/public/img/paris-1889.jpg",
+        image: "/img/paris-1889.jpg",
         tag: "Populaire",
         tagColor: "gold"
     },
@@ -20,7 +20,7 @@ export const DESTINATIONS: Destination[] = [
         location: "Préhistoire",
         duration: "5 Jours",
         price: "À partir de 18 900 $",
-        image: "src/public/img/cretaceous.jpg",
+        image: "/img/cretaceous.jpg",
         tag: "Aventure",
         tagColor: "bronze"
     },
@@ -31,7 +31,7 @@ export const DESTINATIONS: Destination[] = [
         location: "Italie",
         duration: "10 Jours",
         price: "À partir de 14 750 $",
-        image: "src/public/img/florence-1504.jpg",
+        image: "/img/florence-1504.jpg",
         tag: "Culturel",
         tagColor: "gold"
     }
