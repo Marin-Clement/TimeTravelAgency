@@ -1,17 +1,27 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import { Calendar, Users, Shield, Check, Loader2 } from "lucide-react";
 import { DESTINATIONS } from "../../constants/data";
 import { useTimeTravel } from "../../hooks/useTimeTravel";
 
-export function BookingForm() {
+interface BookingFormProps {
+    selectedDestinationId?: string;
+}
+
+export function BookingForm({ selectedDestinationId }: BookingFormProps) {
     const { bookingStatus, submitBooking } = useTimeTravel();
     const [formData, setFormData] = useState({
-        destinationId: DESTINATIONS[0].id,
+        destinationId: selectedDestinationId || DESTINATIONS[0].id,
         date: "",
         travelers: 1,
         insurance: false,
     });
+
+    useEffect(() => {
+        if (selectedDestinationId) {
+            setFormData(prev => ({ ...prev, destinationId: selectedDestinationId }));
+        }
+    }, [selectedDestinationId]);
 
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();

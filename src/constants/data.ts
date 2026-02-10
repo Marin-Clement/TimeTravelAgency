@@ -9,7 +9,7 @@ export const DESTINATIONS: Destination[] = [
         location: "France",
         duration: "7 Days",
         price: "From $12,500",
-        image: "https://images.unsplash.com/photo-1632749696219-4c3ba70af799?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxFaWZmZWwlMjBUb3dlciUyMDE4ODklMjB2aW50YWdlfGVufDF8fHx8MTc3MDcxMjQzOXww&ixlib=rb-4.1.0&q=80&w=1080",
+        image: "src/public/img/paris-1889.jpg",
         tag: "Popular",
         tagColor: "gold"
     },
@@ -20,7 +20,7 @@ export const DESTINATIONS: Destination[] = [
         location: "Prehistoric",
         duration: "5 Days",
         price: "From $18,900",
-        image: "https://images.unsplash.com/photo-1761549148556-a2cf3307f8b8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxkaW5vc2F1ciUyMHByZWhpc3RvcmljJTIwanVuZ2xlfGVufDF8fHx8MTc3MDcxMjQ0MHww&ixlib=rb-4.1.0&q=80&w=1080",
+        image: "src/public/img/cretaceous.jpg",
         tag: "Adventure",
         tagColor: "bronze"
     },
@@ -31,7 +31,7 @@ export const DESTINATIONS: Destination[] = [
         location: "Italy",
         duration: "10 Days",
         price: "From $14,750",
-        image: "https://images.unsplash.com/photo-1685872438049-0d00dded97d8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxGbG9yZW5jZSUyMFJlbmFpc3NhbmNlJTIwYXJjaGl0ZWN0dXJlJTIwYXJ0fGVufDF8fHx8MTc3MDcxMjQ0MHww&ixlib=rb-4.1.0&q=80&w=1080",
+        image: "src/public/img/florence-1504.jpg",
         tag: "Cultural",
         tagColor: "gold"
     }

@@ -6,9 +6,10 @@ import { Destination } from "../../types";
 interface DestinationCardProps {
   destination: Destination;
   index: number;
+  onSelect?: (destinationId: string) => void;
 }
 
-export function DestinationCard({ destination, index }: DestinationCardProps) {
+export function DestinationCard({ destination, index, onSelect }: DestinationCardProps) {
   const getTagColor = (color: string) => {
     switch (color) {
       case "gold":
@@ -26,6 +27,7 @@ export function DestinationCard({ destination, index }: DestinationCardProps) {
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6, delay: index * 0.1 }}
       viewport={{ once: true }}
+      onClick={() => onSelect?.(destination.id)}
       className="group relative overflow-hidden rounded-3xl bg-[#1a1a1a] border border-luxury-gold/20 hover:border-luxury-gold/60 transition-all duration-500 hover:shadow-[0_0_40px_rgba(212,175,55,0.3)] hover:-translate-y-2 h-full flex flex-col cursor-pointer"
     >
       <div className="relative h-96 overflow-hidden shrink-0">

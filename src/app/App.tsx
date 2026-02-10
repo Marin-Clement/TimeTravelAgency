@@ -16,6 +16,15 @@ import { Sparkles } from "lucide-react";
 
 export default function App() {
   const [isQuizOpen, setIsQuizOpen] = useState(false);
+  const [selectedDestinationId, setSelectedDestinationId] = useState<string | undefined>();
+
+  const handleSelectDestination = (destinationId: string) => {
+    setSelectedDestinationId(destinationId);
+    const bookingSection = document.getElementById("book");
+    if (bookingSection) {
+      bookingSection.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  };
 
   return (
     <div className="min-h-screen bg-deep-space text-white overflow-x-hidden">
@@ -38,12 +47,12 @@ export default function App() {
 
         <Stats />
         <Experience />
-        <DestinationGallery />
+        <DestinationGallery onSelectDestination={handleSelectDestination} />
 
         {/* Integrated Booking Form Section */}
         <section id="book" className="py-24 px-6 bg-[#0a0a0a]">
           <div className="max-w-4xl mx-auto">
-            <BookingForm />
+            <BookingForm selectedDestinationId={selectedDestinationId} />
           </div>
         </section>
 
@@ -54,7 +63,11 @@ export default function App() {
 
       <Footer />
       <ChatWidget />
-      <QuizModal isOpen={isQuizOpen} onClose={() => setIsQuizOpen(false)} />
+      <QuizModal 
+        isOpen={isQuizOpen} 
+        onClose={() => setIsQuizOpen(false)} 
+        onSelectDestination={handleSelectDestination}
+      />
     </div>
   );
 }

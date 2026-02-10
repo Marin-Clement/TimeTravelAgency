@@ -2,7 +2,11 @@ import { motion } from "motion/react";
 import { DestinationCard } from "./DestinationCard";
 import { DESTINATIONS, MORE_DESTINATIONS } from "../../constants/data";
 
-export function DestinationGallery() {
+interface DestinationGalleryProps {
+    onSelectDestination?: (destinationId: string) => void;
+}
+
+export function DestinationGallery({ onSelectDestination }: DestinationGalleryProps) {
     return (
         <section
             id="destinations"
@@ -34,6 +38,7 @@ export function DestinationGallery() {
                             key={destination.id}
                             destination={destination}
                             index={index}
+                            onSelect={onSelectDestination}
                         />
                     ))}
                 </div>
@@ -43,7 +48,8 @@ export function DestinationGallery() {
                         <DestinationCard
                             key={destination.id}
                             destination={destination}
-                            index={index + 3} // Offset index for delay
+                            index={index + 3}
+                            onSelect={onSelectDestination}
                         />
                     ))}
                 </div>

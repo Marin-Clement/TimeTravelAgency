@@ -7,9 +7,10 @@ import { Destination } from "../../types";
 interface QuizModalProps {
     onClose: () => void;
     isOpen: boolean;
+    onSelectDestination?: (destinationId: string) => void;
 }
 
-export function QuizModal({ onClose, isOpen }: QuizModalProps) {
+export function QuizModal({ onClose, isOpen, onSelectDestination }: QuizModalProps) {
     // We're lifting state up to the parent component in a real app,
     // but for this modular feature, we can instantiate the hook here or pass it down.
     // For simplicity, let's assume we use the hook inside.
@@ -157,8 +158,10 @@ export function QuizModal({ onClose, isOpen }: QuizModalProps) {
                                     </button>
                                     <button
                                         onClick={() => {
+                                            if (recommendedDestination) {
+                                                onSelectDestination?.(recommendedDestination.id);
+                                            }
                                             onClose();
-                                            document.getElementById("book")?.scrollIntoView({ behavior: "smooth" });
                                         }}
                                         className="px-8 py-3 bg-gradient-to-r from-luxury-gold to-rich-brown text-deep-space rounded-full font-bold hover:shadow-[0_0_20px_rgba(212,175,55,0.5)] transition-shadow"
                                     >
