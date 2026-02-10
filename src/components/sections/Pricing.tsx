@@ -38,8 +38,8 @@ export function Pricing() {
                             }}
                             viewport={{ once: true }}
                             className={`relative p-8 rounded-3xl border transition-all duration-500 hover:-translate-y-2 ${tier.popular
-                                    ? "bg-gradient-to-br from-luxury-gold/10 to-rich-brown/10 border-luxury-gold shadow-[0_0_50px_rgba(212,175,55,0.3)]"
-                                    : "bg-[#1a1a1a] border-luxury-gold/20 hover:border-luxury-gold/40"
+                                ? "bg-gradient-to-br from-luxury-gold/10 to-rich-brown/10 border-luxury-gold shadow-[0_0_50px_rgba(212,175,55,0.3)]"
+                                : "bg-[#1a1a1a] border-luxury-gold/20 hover:border-luxury-gold/40"
                                 }`}
                         >
                             {tier.popular && (
@@ -64,14 +64,15 @@ export function Pricing() {
                                     </li>
                                 ))}
                             </ul>
-                            <button
-                                className={`w-full py-3 rounded-full font-semibold transition-all duration-300 ${tier.popular
-                                        ? "bg-gradient-to-r from-luxury-gold to-rich-brown text-deep-space hover:shadow-[0_0_30px_rgba(212,175,55,0.5)]"
-                                        : "border-2 border-luxury-gold text-luxury-gold hover:bg-luxury-gold hover:text-deep-space"
+                            <a
+                                href="#book"
+                                className={`block w-full py-3 rounded-full font-semibold transition-all duration-300 ${tier.popular
+                                    ? "bg-gradient-to-r from-luxury-gold to-rich-brown text-deep-space hover:shadow-[0_0_30px_rgba(212,175,55,0.5)]"
+                                    : "border-2 border-luxury-gold text-luxury-gold hover:bg-luxury-gold hover:text-deep-space"
                                     }`}
                             >
                                 Start Journey
-                            </button>
+                            </a>
                         </motion.div>
                     ))}
                 </div>

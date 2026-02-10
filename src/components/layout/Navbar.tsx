@@ -2,14 +2,18 @@ import { motion } from "motion/react";
 import { Clock } from "lucide-react";
 import { useScrollPosition } from "../../hooks/useScrollPosition";
 
-export function Navbar() {
+interface NavbarProps {
+    onOpenQuiz?: () => void;
+}
+
+export function Navbar({ onOpenQuiz }: NavbarProps) {
     const scrolled = useScrollPosition(50);
 
     return (
         <header
             className={`fixed top-0 w-full z-50 transition-all duration-300 ${scrolled
-                    ? "bg-deep-space/95 backdrop-blur-md border-b border-luxury-gold/20 shadow-[0_4px_20px_rgba(212,175,55,0.1)]"
-                    : "bg-transparent"
+                ? "bg-deep-space/95 backdrop-blur-md border-b border-luxury-gold/20 shadow-[0_4px_20px_rgba(212,175,55,0.1)]"
+                : "bg-transparent"
                 }`}
         >
             <nav className="max-w-7xl mx-auto px-6 lg:px-8 py-4 flex items-center justify-between">
@@ -42,8 +46,11 @@ export function Navbar() {
                     >
                         Pricing
                     </a>
-                    <button className="px-6 py-2 bg-gradient-to-r from-luxury-gold to-rich-brown text-deep-space rounded-full text-sm tracking-wide hover:shadow-[0_0_20px_rgba(212,175,55,0.5)] transition-all duration-300 font-semibold">
-                        Book Now
+                    <button
+                        onClick={onOpenQuiz}
+                        className="px-6 py-2 bg-gradient-to-r from-luxury-gold to-rich-brown text-deep-space rounded-full text-sm tracking-wide hover:shadow-[0_0_20px_rgba(212,175,55,0.5)] transition-all duration-300 font-semibold cursor-pointer"
+                    >
+                        Find Your Era
                     </button>
                 </div>
             </nav>

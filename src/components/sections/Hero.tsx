@@ -1,7 +1,11 @@
 import { motion, useScroll, useTransform } from "motion/react";
 import { Sparkles, ChevronRight } from "lucide-react";
 
-export function Hero() {
+interface HeroProps {
+    onOpenQuiz?: () => void;
+}
+
+export function Hero({ onOpenQuiz }: HeroProps) {
     const { scrollY } = useScroll();
     const heroY = useTransform(scrollY, [0, 500], [0, 150]);
     const heroOpacity = useTransform(scrollY, [0, 300], [1, 0]);
@@ -117,9 +121,12 @@ export function Hero() {
                     transition={{ duration: 0.8, delay: 0.8 }}
                     className="flex flex-col sm:flex-row items-center justify-center gap-4"
                 >
-                    <button className="group relative px-10 py-4 bg-gradient-to-r from-luxury-gold to-rich-brown text-deep-space rounded-full text-lg tracking-wide overflow-hidden hover:shadow-[0_0_40px_rgba(212,175,55,0.6)] transition-all duration-500 font-semibold cursor-pointer">
+                    <button
+                        onClick={onOpenQuiz}
+                        className="group relative px-10 py-4 bg-gradient-to-r from-luxury-gold to-rich-brown text-deep-space rounded-full text-lg tracking-wide overflow-hidden hover:shadow-[0_0_40px_rgba(212,175,55,0.6)] transition-all duration-500 font-semibold cursor-pointer"
+                    >
                         <span className="relative z-10 flex items-center gap-2">
-                            Explore the Eras
+                            Find Your Era
                             <Sparkles className="w-5 h-5 group-hover:rotate-12 transition-transform duration-300" />
                         </span>
                         <div className="absolute inset-0 bg-gradient-to-r from-rich-brown to-luxury-gold opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
